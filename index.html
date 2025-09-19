@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bet365 Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .typeform-container {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 480px;
+            overflow: hidden;
+        }
+        
+        .form-header {
+            background-color: #00AD4F;
+            color: white;
+            padding: 28px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+        
+        .form-content {
+            padding: 35px;
+        }
+        
+        .input-group {
+            margin-bottom: 24px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            color: #999;
+            z-index: 1;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 16px 18px 16px 45px;
+            border: 2px solid #e6e6e6;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #00AD4F;
+            box-shadow: 0 0 0 3px rgba(0, 173, 79, 0.1);
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #555;
+        }
+        
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            accent-color: #00AD4F;
+        }
+        
+        .login-button {
+            background-color: #00AD4F;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 18px 20px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px rgba(0, 173, 79, 0.2);
+        }
+        
+        .login-button:hover {
+            background-color: #008e40;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(0, 173, 79, 0.25);
+        }
+        
+        .login-button:active {
+            transform: translateY(0);
+        }
+        
+        .message-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #00AD4F;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.5;
+            border-radius: 0 0 8px 8px;
+            color: #444;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+            margin: 25px 0;
+        }
+        
+        .password-container {
+            position: relative;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #777;
+            z-index: 2;
+        }
+        
+        @media (max-width: 500px) {
+            .typeform-container {
+                border-radius: 12px;
+            }
+            
+            .form-header {
+                padding: 20px;
+            }
+            
+            .form-content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="typeform-container">
+        <div class="form-header">
+            <div class="logo">bet365</div>
+        </div>
+        
+        <div class="form-content">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <div class="input-container">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="username" placeholder="Enter your username" value="atomaher">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <div class="input-container password-container">
+                    <i class="fas fa-lock input-icon"></i>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <i class="toggle-password fas fa-eye"></i>
+                </div>
+            </div>
+            
+            <label class="checkbox-label">
+                <input type="checkbox" id="remember">
+                Remember username
+            </label>
+            
+            <button class="login-button">Log In</button>
+            
+            <div class="divider"></div>
+            
+            <div class="message-box">
+                We need to speak to you before you are able to access your account.<br>
+                Please contact us quoting Ref EXTMOB
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle password visibility
+        document.querySelector('.toggle-password').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Toggle eye icon
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+        
+        // Add focus effect to inputs
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.style.transform = 'scale(1.02)';
+                input.parentElement.style.transition = 'transform 0.3s ease';
+            });
+            
+            input.addEventListener('blur', () => {
+                input.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+  </html>
